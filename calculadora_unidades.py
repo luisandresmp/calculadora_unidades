@@ -1,10 +1,20 @@
-##unidad = input("¿Que unidad quieres convertir?: ")
+consulta = int(input('¿Que unidad quieres convertir? [1] Kilos -> Gramos [2] Gramos -> Kilos '))
 
-unidad = input("¿Cuantos kilos quieres transformar en gramos?: ")
-unidad = float(unidad)
 
-gramo = 1000
+if consulta == 1:
+    unidad = float(input('¿Cuantos Kilogramos quieres convertir? '))
+    gramo = 1000
+    result = unidad * gramo
+    result = round(result,2)
+    print('Son ' + str(result) + ' gramos.')
 
-result = unidad * gramo
-result = round(result, -1)
-print("Son " + str(result) + " gramos.")
+elif consulta == 2:
+    unidad = float(input('¿Cuantos Gramos quieres convertir? '))
+    gramo = 1000
+    result = unidad / gramo
+    result = round(result,2)
+    print('Son ' + str(result) + ' kilogramos.')
+
+else:
+    print('No permitido')
+
