@@ -1,3 +1,15 @@
+def operacion_multi(unidad, valor, obtienes):
+    und = float(input('¿Cuantos ' + unidad + ' quieres convertir? '))
+    result = und * valor
+    result = round(result,2)
+    print('Son ' + str(result) + obtienes +'. ')
+
+def operacion_div(unidad, valor, obtienes):
+    und = float(input('¿Cuantos ' + unidad + ' quieres convertir? '))
+    result = und / valor
+    result = round(result,2)
+    print('Son ' + str(result) + ' ' +obtienes +'. ')    
+
 menu = """
 *************************************
 Bienvenido al convertidor de unidades
@@ -14,26 +26,13 @@ Operación:
 consulta = int(input(menu))
 
 if consulta == 1:
-    unidad = float(input('¿Cuantos Kilogramos quieres convertir? '))
-    gramo = 1000
-    result = unidad * gramo
-    result = round(result,2)
-    print('Son ' + str(result) + ' gramos.')
+    operacion_multi('Kilogramos', 1000, 'gramos')
 
 elif consulta == 2:
-    unidad = float(input('¿Cuantos Gramos quieres convertir? '))
-    gramo = 1000
-    result = unidad / gramo
-    result = round(result,2)
-    print('Son ' + str(result) + ' kilogramos.')
-
+    operacion_div('Gramos', 1000, 'kilogramos')
+    
 elif consulta == 3:
-    unidad = float(input('¿Cuantos milimitros quieres convertir? '))
-    gramo = 1000
-    result = unidad / gramo
-    result = round(result,2)
-    print('Son ' + str(result) + ' kilogramos.')
-
+    operacion_div('mililitros', 1000, 'kilogramos')
 else:
     print('No permitido')
 
