@@ -4,6 +4,7 @@ def operacion_multi(unidad, valor, obtienes):
     result = round(result,2)
     print('Son ' + str(result) + obtienes +'. ')
 
+
 def operacion_div(unidad, valor, obtienes):
     und = float(input('¿Cuantos ' + unidad + ' quieres convertir? '))
     result = und / valor
