@@ -26,14 +26,17 @@ Operación:
 """
 consulta = int(input(menu))
 
+UND = 1000
+
 if consulta == 1:
-    operacion_multi('Kilogramos', 1000, 'gramos')
+    operacion_multi('Kilogramos', UND, ' gramos')
 
 elif consulta == 2:
-    operacion_div('Gramos', 1000, 'kilogramos')
+    operacion_div('Gramos', UND, ' kilogramos')
     
 elif consulta == 3:
-    operacion_div('mililitros', 1000, 'kilogramos')
+    operacion_div('mililitros', UND, ' kilogramos')
+
 else:
     print('No permitido')
 
